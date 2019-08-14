@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>关于</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <title>关于</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
-<body background ="./pic/pic.jpg">
-	<!--[if lt IE 9]>
+
+<body background="./pic/pic.jpg">
+    <!--[if lt IE 9]>
             <div class="alert alert-warning flex" role="alert">
           你的浏览器太久了，请升级再访问本网站 
           <br>
@@ -18,71 +20,71 @@
           <a href="http://browsehappy.com" class="alert-link">点我升级</a>
         </div>
         <![endif]-->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <img src="pic/chenmo.jpg" style="height:25px;width:25px"></img>
+        <a class="navbar-brand" href="index.html">Tan90</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">博客</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">关于</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="friends.html">友情链接</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div style="text-align:center;background:white">
+        <h2>关于本站</h2>
+        <p>是本人最近没什么项目了，想起来要更新一下网站。2333</p>
+        <a href="https://github.com/cmjang">
+            <p>我的GITHUB</p>
+        </a>
+    </div>
+    <br>
+    <div style="text-align:center;margin:auto;background:white;width:370px;border-radius:14px;opacity:0.70;">
+        <div class="gn_box">
+            <h1><span id="t_y">00 年</span>高考倒计时</h1>
+            <h4><span id="t_y1"></span>高考时间：<span id="t_y2">00 年</span>6月7、8日</h4>
+            <h4>目前距离<span id="t_y3">00 年</span>高考还有</h4>
+            <div id="CountMsg" class="HotDate">
+                <span id="t_d">00 天</span>
+                <span id="t_h">00 时</span>
+                <span id="t_m">00 分</span>
+                <span id="t_s">00 秒</span>
+            </div>
+            <br>
+        </div>
+        <script type="text/javascript">
+        function getRTime() {
+            var NowTime = new Date();
+            var NowYear = "2021";
+            var EndTime = new Date(NowYear + "/06/07 09:00:00"); //截止时间
 
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-   <img src="pic/chenmo.jpg" style = "height:25px;width:25px"></img>
-  <a class="navbar-brand" href="index.html">Tan90</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">博客</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">关于</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="friends.html">友情链接</a>
-      </li>    
-    </ul>
-  </div>
-  </nav>
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
 
-  <div style="text-align:center;background:white">
-    <h2>关于本站</h2>
-    <p>是本人最近没什么项目了，想起来要更新一下网站。2333</p>
-    <a href="https://github.com/cmjang"><p>我的GITHUB</p></a>
-  </div>
-  <br>
-
-  <div style="text-align:center;margin:auto;background:white;width:370px;border-radius:14px;opacity:0.70;">
-  <div class="gn_box">
-		<h1><span id="t_y">00 年</span>高考倒计时</h1>
-		<h4><span id="t_y1"></span>高考时间：<span id="t_y2">00 年</span>6月7、8日</h4>
-        <h4>目前距离<span id="t_y3">00 年</span>高考还有</h4>
-		<div id="CountMsg" class="HotDate">
-			<span id="t_d">00 天</span>
-			<span id="t_h">00 时</span>
-			<span id="t_m">00 分</span>
-			<span id="t_s">00 秒</span>
-		</div>
-		<br>
-	</div>
-	<script type="text/javascript">
-		function getRTime(){
-			var NowTime = new Date();
-			var NowYear="2021";
-			var EndTime= new Date(NowYear+"/06/07 09:00:00"); //截止时间
- 
-			var t =EndTime.getTime() - NowTime.getTime();
-			var d=Math.floor(t/1000/60/60/24);
-			var h=Math.floor(t/1000/60/60%24);
-			var m=Math.floor(t/1000/60%60);
-			var s=Math.floor(t/1000%60);
-	
-			document.getElementById("t_d").innerHTML = d + " 天";
-			document.getElementById("t_h").innerHTML = h + " 时";
-			document.getElementById("t_m").innerHTML = m + " 分";
-			document.getElementById("t_s").innerHTML = s + " 秒";
-			document.getElementById("t_y").innerHTML = NowYear + "年";
-			//document.getElementById("t_y1").innerHTML = NowYear + "年";
-			document.getElementById("t_y2").innerHTML = NowYear + "年";
-			document.getElementById("t_y3").innerHTML = NowYear + "年";
-		}
-		setInterval(getRTime,1000);
-		</script>
+            document.getElementById("t_d").innerHTML = d + " 天";
+            document.getElementById("t_h").innerHTML = h + " 时";
+            document.getElementById("t_m").innerHTML = m + " 分";
+            document.getElementById("t_s").innerHTML = s + " 秒";
+            document.getElementById("t_y").innerHTML = NowYear + "年";
+            //document.getElementById("t_y1").innerHTML = NowYear + "年";
+            document.getElementById("t_y2").innerHTML = NowYear + "年";
+            document.getElementById("t_y3").innerHTML = NowYear + "年";
+        }
+        setInterval(getRTime, 1000);
+        </script>
 </body>
+
 </html>
 
